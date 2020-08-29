@@ -12,3 +12,7 @@ body {
       border-radius: 12px;
       padding: 3px;
   }
+
+  .right {
+    text-align: right;
+  }
