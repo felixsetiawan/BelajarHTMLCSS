@@ -1,0 +1,14 @@
+body {
+    background-color: lightblue;
+  }
+  
+  h1 {
+    color: navy;
+    margin-left: 20px;
+  }
+  
+  .round {
+      border: 1px solid burlywood;
+      border-radius: 12px;
+      padding: 3px;
+  }
