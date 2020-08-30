@@ -1,53 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<title>Profile</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
-<title>
-    Profile
-</title>
+
 </head>
 <body>
-    <!--MAIN MENU WRAP BEGIN-->
-    <div class="">
 
+    <h2>CSS Template using Flexbox</h2>
+    <p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other. Resize the browser window to see the responsive effect.</p>
+    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 and earlier versions.</p>
+
+    <div class="header">
+        <h2>Header</h2>
+        <div class="row">
+            Teknik Informatika
+            Felix Setiawan
+        </div>
     </div>
-    <!--MAIN MENU WRAP END-->
 
-    <!--PROFILE WRAP BEGIN-->
-    <div class="flex-container">
-        <section>
-            <section>
-                <div class="row">
-                    <div>
-                        STEI
-                    </div>
-                    <div>
-                        TEKNIK INFORMATIKA
-                    </div>
-                </div>
-            </section>
+    <div class="row">
+        <div class="column side" style="background-color:#aaa;">
+            Column
+            <img src="image/profile.jpg">
+        </div>
+        <div class="column middle" style="background-color:#bbb;">
+            Column
+            Info
             <div class="row">
-                <div>
-                    1
+                <div class="column middle" style="background-color:#ccc;">
+                    column
                 </div>
-                <div>
-                    2
-                </div>
-                <div>
-                    <img src="image\profile.jpg">
-                </div>
-                <div>
-                    <h1>Felix Setiawan</h1>
-                    <h2>13518078</h2>
-                    <h3>Teknik Informatika</h3>
-                    <h3>13518078@std.stei.itb.ac.id</h3>
-                    <p>About.</p>
+                <div class="column middle" style="background-color:#ddd;">
+                    column
                 </div>
             </div>
-    
-        </section>
+        </div>
     </div>
-    <!--PROFILE WRAP END-->
+
+    <div class="footer">
+        <p>Footer</p>
+    </div>
 
 </body>
 </html>
