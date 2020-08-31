@@ -1,48 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-<title>Profile</title>
+<title>13518078 Felix Setiawan</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" type="text/css" href="mystyle.css">
 
 </head>
 <body>
+    
+<div class="sidenav">
+    <button id="info">Informasi Personal</button>
+    <button id="pendidikan">Pendidikan</button>
+    <button id="ahli">Keahlian</button>
+</div>
 
-    <h2>CSS Template using Flexbox</h2>
-    <p>In this example, we have created a header, three unequal columns and a footer. On smaller screens, the columns will stack on top of each other. Resize the browser window to see the responsive effect.</p>
-    <p><strong>Note:</strong> Flexbox is not supported in Internet Explorer 10 and earlier versions.</p>
-
-    <div class="header">
-        <h2>Header</h2>
-        <div class="row">
-            Teknik Informatika
-            Felix Setiawan
+<div class="content">
+    <h1>
+        Profile Page
+    </h1>
+    <div class="clearfix">
+        <p>
+            <img class="float-left" src="image/profile.jpg"> 
+            <p class="float-left image">
+                Felix Setiawan <br>
+                Teknik Informatika <br>
+                Institut Teknologi Bandung <br>
+                NIM : 13518078
+            </p>
+                
+        </p>
+    </div>
+    <div class="flex-container">
+        <div id="content">
         </div>
     </div>
 
-    <div class="row">
-        <div class="column side" style="background-color:#aaa;">
-            Column
-            <img src="image/profile.jpg">
-        </div>
-        <div class="column middle" style="background-color:#bbb;">
-            Column
-            Info
-            <div class="row">
-                <div class="column middle" style="background-color:#ccc;">
-                    column
-                </div>
-                <div class="column middle" style="background-color:#ddd;">
-                    column
-                </div>
-            </div>
-        </div>
-    </div>
+</div>
 
-    <div class="footer">
-        <p>Footer</p>
-    </div>
+<script>
+    function dist(n){
+ var blank = '';
+ for (i=0; i<n;i++){
+  blank+='&nbsp';
+ }
+ return blank;
+}
+var identity = `
+<h3>Informasi Personal</h3>
+
+ <table>
+  <tr><td>Tempat, Tanggal Lahir${dist(50)}</td><td>Surabaya, 22 Mei 2000</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>Hobi</td><td>Menonton film , Bermain game, Olahraga</td> </tr>
+ </table>
+`;
+
+var pendidikan = `
+<h3>Pendidikan</h3>
+ <table>
+    <tr><td>SDK Santo Carolus Surabaya${dist(77)}</td><td>2006 - 2012</td></tr>
+  <tr><td><hr></td></tr>
+    <tr><td>SMPK Santo Carolus Surabaya</td><td>2012 - 2015</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>SMAK St. Louis 1 Surabaya</td><td>2015 - 2018</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>Sekolah Teknik Elektro dan Informatika</td><td>2018 - now</td></tr>
+  <tr><td>Institut Teknologi Bandung</td></tr>
+ </table>
+`;
+
+var ahli = `
+<h3>Keahlian</h3>
+ <table>
+  <tr><td>Microsoft Offices ( Word , Powerpoint , Excel)</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>Programming Language ( Python, C++, Java, C, C#)</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>Adobe Photoshop</td></tr>
+  <tr><td><hr></td></tr>
+  <tr><td>Learning HTML, CSS, and Javascript</td></tr>
+ </table>
+`;
+
+function changeclass(id_string, class_string){
+ document.getElementById(id_string).className=class_string;
+}
+
+function changehtml(content){
+ document.getElementById('content').innerHTML=content;
+}
+
+function resetbutton(){
+ changeclass('info', 'btn');
+ changeclass('pendidikan', 'btn');
+ changeclass('ahli', 'btn');
+}
+
+function click(button_id, content){
+ document.getElementById(button_id).onclick=function(){
+  resetbutton();
+  changeclass(button_id, 'btn active');
+  changehtml(content);
+ } 
+}
+changehtml(identity);
+click('info', identity);
+click('pendidikan', pendidikan);
+click('ahli', ahli);
+</script>
 
 </body>
 </html>
